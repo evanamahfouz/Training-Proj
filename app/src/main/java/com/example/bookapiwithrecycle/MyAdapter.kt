@@ -17,7 +17,6 @@ class MyAdapter(private val list: List<VolumeInfo>) : RecyclerView.Adapter<MyAda
         var title = view.txt_title
         var sub_title = view.txt_subtitle
         var authors = view.txt_authors
-        var click = view.txt_click
 
 
     }
@@ -32,7 +31,7 @@ class MyAdapter(private val list: List<VolumeInfo>) : RecyclerView.Adapter<MyAda
                 holder.authors.append(it.joinToString())
             }
 
-            click.setOnClickListener {
+            itemView.setOnClickListener {
                 val context = itemView.context
                 val intent = Intent(context, BookDecripActivity::class.java)
                     .putExtra(BookDecripActivity.ARG_DESC, c.description)
