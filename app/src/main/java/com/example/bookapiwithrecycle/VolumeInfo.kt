@@ -1,9 +1,5 @@
 package com.example.bookapiwithrecycle
 
-import com.example.bookapiwithrecycle.ImageLinks
-import com.example.bookapiwithrecycle.IndustryIdentifier
-import com.example.bookapiwithrecycle.PanelizationSummary
-import com.example.bookapiwithrecycle.ReadingModes
 
 data class VolumeInfo(
     val title: String? = null,

@@ -22,9 +22,9 @@
         android:layout_weight="1"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        tools:text="hiiiiiii"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        tools:text="hiiiiiii" />
 
 
     <TextView
@@ -38,12 +38,5 @@
         android:text=""
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/txt_click"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:background="@drawable/click"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:textSize="16sp" />
+
 </LinearLayout>
