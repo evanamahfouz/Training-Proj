@@ -1,18 +1,14 @@
-package com.example.bookapikotlin
+package com.example.bookapiwithrecycle
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class IndustryIdentifier(var x:String="") {
-    @SerializedName("type")
-    @Expose
-    private var type: String? = null
-        get() = field
+data class IndustryIdentifier(
+    val type: String? = null,
 
-    @SerializedName("identifier")
-    @Expose
-    private var identifier: String? = null
-        get() = field
+
+    val identifier: String? = null
+) {
 
 
 }

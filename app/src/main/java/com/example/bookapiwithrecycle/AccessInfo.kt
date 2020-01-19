@@ -1,7 +1,5 @@
 package com.example.bookapiwithrecycle
 
-import com.example.bookapikotlin.Pdf
-
 data class AccessInfo(
     val country: String?,
     val viewability: String?,

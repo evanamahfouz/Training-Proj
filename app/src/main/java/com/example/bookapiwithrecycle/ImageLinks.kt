@@ -1,4 +1,4 @@
-package com.example.bookapikotlin
+package com.example.bookapiwithrecycle
 
-class ImageLinks {
+data class ImageLinks(val x:String?="") {
 }

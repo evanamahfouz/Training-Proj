@@ -1,6 +1,5 @@
 package com.example.bookapiwithrecycle
 
-import com.example.bookapikotlin.BookObject
 import retrofit2.Call
 import retrofit2.http.GET
 

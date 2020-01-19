@@ -1,17 +1,13 @@
-package com.example.bookapikotlin
+package com.example.bookapiwithrecycle
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class Pdf(var x:String="") {
-    @SerializedName("isAvailable")
-    @Expose
-    private var isAvailable: Boolean? = null
-        get() = field
+data class Pdf(
+    val isAvailable: Boolean? = null,
 
-    @SerializedName("acsTokenLink")
-    @Expose
-    private var acsTokenLink: String? = null
-        get() = field
+    val acsTokenLink: String? = null
+) {
+
 
 }

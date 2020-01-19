@@ -1,19 +1,14 @@
-package com.example.bookapikotlin
+package com.example.bookapiwithrecycle
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class ReadingModes(var x:String="") {
-    @SerializedName("text")
-    @Expose
-    private var text: Boolean? = null
-        get() = field
+data class ReadingModes(
+    val text: Boolean? = null,
 
-    @SerializedName("image")
-    @Expose
-    private var image: Boolean? = null
-        get() = field
 
+    val image: Boolean? = null
+) {
 
 
 }

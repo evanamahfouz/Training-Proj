@@ -1,110 +1,57 @@
-package com.example.bookapikotlin
+package com.example.bookapiwithrecycle
 
-import com.google.gson.annotations.Expose
-import com.google.gson.annotations.SerializedName
+import com.example.bookapiwithrecycle.ImageLinks
+import com.example.bookapiwithrecycle.IndustryIdentifier
+import com.example.bookapiwithrecycle.PanelizationSummary
+import com.example.bookapiwithrecycle.ReadingModes
 
-data class VolumeInfo(var x:String="") {
-    @SerializedName("title")
-    @Expose
-     var title: String? = null
-        get() = field
+data class VolumeInfo(
+    val title: String? = null,
 
+    val subtitle: String? = null,
 
+    val authors: List<String>? = null,
 
-    @SerializedName("subtitle")
-    @Expose
-     var subtitle: String? = null
-        get() = field
+    val publisher: String? = null,
 
+    val publishedDate: String? = null,
 
-    @SerializedName("authors")
-    @Expose
-     var authors: List<String>? = null
-        get() = field
-    @SerializedName("publisher")
-    @Expose
-     var publisher: String? = null
-        get() = field
+    val description: String? = null,
 
+    val industryIdentifiers: List<IndustryIdentifier>? = null,
 
-    @SerializedName("publishedDate")
-    @Expose
-     var publishedDate: String? = null
-        get() = field
-    @SerializedName("description")
-    @Expose
-     var description: String? = null
-        get() = field
-    @SerializedName("industryIdentifiers")
-    @Expose
-     var industryIdentifiers: List<IndustryIdentifier>? = null
-        get() = field
-    @SerializedName("readingModes")
-    @Expose
-     var readingModes: ReadingModes? = null
-        get() = field
-    @SerializedName("printType")
-    @Expose
-     var printType: String? = null
-        get() = field
-    @SerializedName("maturityRating")
-    @Expose
-     var maturityRating: String? = null
-        get() = field
-    @SerializedName("allowAnonLogging")
-    @Expose
-     var allowAnonLogging: Boolean? = null
-        get() = field
-    @SerializedName("contentVersion")
-    @Expose
-     var contentVersion: String? = null
-        get() = field
-    @SerializedName("panelizationSummary")
-    @Expose
-     var panelizationSummary: PanelizationSummary? = null
-        get() = field
-    @SerializedName("imageLinks")
-    @Expose
-     var imageLinks: ImageLinks? = null
-        get() = field
-    @SerializedName("language")
-    @Expose
-     var language: String? = null
-        get() = field
-    @SerializedName("previewLink")
-    @Expose
-     var previewLink: String? = null
-        get() = field
-    @SerializedName("infoLink")
-    @Expose
-     var infoLink: String? = null
-        get() = field
-    @SerializedName("canonicalVolumeLink")
-    @Expose
-     var canonicalVolumeLink: String? = null
-        get() = field
-    @SerializedName("pageCount")
-    @Expose
-     var pageCount: Int? = null
-        get() = field
+    val readingModes: ReadingModes? = null,
+
+    val printType: String? = null,
+
+    val maturityRating: String? = null,
+
+    val allowAnonLogging: Boolean? = null,
+
+    val contentVersion: String? = null,
+
+    val panelizationSummary: PanelizationSummary? = null,
+
+    val imageLinks: ImageLinks? = null,
+
+    val language: String? = null,
+
+    val previewLink: String? = null,
+
+    val infoLink: String? = null
+    ,
+    val canonicalVolumeLink: String? = null,
+    val pageCount: Int? = null,
 
 
-    @SerializedName("categories")
-    @Expose
-     var categories: List<String>? = null
-        get() = field
+    val categories: List<String>? = null,
 
 
-    @SerializedName("averageRating")
-    @Expose
-     var averageRating: Double? = null
-        get() = field
+    val averageRating: Double? = null,
 
 
-    @SerializedName("ratingsCount")
-    @Expose
-     var ratingsCount: Int? = null
-        get() = field
+    val ratingsCount: Int? = null
+) {
 
 
 }

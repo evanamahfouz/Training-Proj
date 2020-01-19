@@ -1,49 +1,28 @@
-package com.example.bookapikotlin
+package com.example.bookapiwithrecycle
 
-import com.example.bookapiwithrecycle.AccessInfo
-import com.google.gson.annotations.Expose
-import com.google.gson.annotations.SerializedName
+data class Item(
+    val kind: String? = null,
 
-data class Item(var x:String="") {
 
-    @SerializedName("kind")
-    @Expose
-     var kind: String? = null
+    val id: String? = null,
 
-    get() = field
 
-    @SerializedName("id")
-    @Expose
-     var id: String? = null
-    get() = field
+    val etag: String? = null,
 
-    @SerializedName("etag")
-    @Expose
-     var etag: String? = null
-    get() = field
 
-    @SerializedName("selfLink")
-    @Expose
-     var selfLink: String? = null
-    get() = field
+    val selfLink: String? = null,
 
-    @SerializedName("volumeInfo")
-    @Expose
-    var volumeInfo: VolumeInfo? = null
-    get() = field
 
-    @SerializedName("saleInfo")
-    @Expose
-     var saleInfo: SaleInfo? = null
-    get() = field
+    val volumeInfo: VolumeInfo? = null,
 
-    @SerializedName("accessInfo")
-    @Expose
-     var accessInfo: AccessInfo? = null
-    get() = field
 
-    @SerializedName("searchInfo")
-    @Expose
-     var searchInfo: SearchInfo? = null
-    get() = field
-    }
+    val saleInfo: SaleInfo? = null,
+
+
+    val accessInfo: AccessInfo? = null,
+
+
+    val searchInfo: SearchInfo? = null
+) {}
+
+

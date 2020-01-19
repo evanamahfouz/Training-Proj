@@ -1,18 +1,14 @@
-package com.example.bookapikotlin
+package com.example.bookapiwithrecycle
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class PanelizationSummary(var x:String="") {
-    @SerializedName("containsEpubBubbles")
-    @Expose
-    private var containsEpubBubbles: Boolean? = null
-        get() = field
+data class PanelizationSummary(
+    val containsEpubBubbles: Boolean? = null,
 
-    @SerializedName("containsImageBubbles")
-    @Expose
-    private var containsImageBubbles: Boolean? = null
-        get() = field
+
+    val containsImageBubbles: Boolean? = null
+) {
 
 
 }

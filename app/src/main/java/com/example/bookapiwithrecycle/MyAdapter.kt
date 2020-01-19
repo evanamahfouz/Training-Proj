@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.example.bookapikotlin.VolumeInfo
 import kotlinx.android.synthetic.main.list_quick.view.*
 
 class MyAdapter(private val list: List<VolumeInfo>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
@@ -16,35 +15,28 @@ class MyAdapter(private val list: List<VolumeInfo>) : RecyclerView.Adapter<MyAda
      */
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var title = view.txt_title
-        var sub_title: TextView? = null
-        var authors: TextView? = null
-        var click: TextView? = null
+        var sub_title = view.txt_subtitle
+        var authors = view.txt_authors
+        var click = view.txt_click
 
-        init {
-            view.apply {
-                title = view.txt_title
-                sub_title = txt_subtitle
-                authors = txt_authors
-                click = txt_click
-            }
-        }
+
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val c = list[position]
 
         holder.apply {
-            title?.text = c.title
-            sub_title?.text = c.subtitle
+            title.text = c.title
+            sub_title.text = c.subtitle
             c.authors?.let {
-                holder.authors?.append(it.joinToString())
+                holder.authors.append(it.joinToString())
             }
 
-            click?.setOnClickListener {
+            click.setOnClickListener {
                 val context = itemView.context
                 val intent = Intent(context, BookDecripActivity::class.java)
                     .putExtra(BookDecripActivity.ARG_DESC, c.description)
-                context?.startActivity(intent)
+                context.startActivity(intent)
             }
         }
     }

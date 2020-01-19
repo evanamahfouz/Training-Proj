@@ -1,13 +1,11 @@
-package com.example.bookapikotlin
+package com.example.bookapiwithrecycle
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class SearchInfo (var txt:String =""){
-    @SerializedName("textSnippet")
-    @Expose
-    private var textSnippet: String? = null
-    get() = field
+data class SearchInfo (  val textSnippet: String? = null){
+
+
 
 
 }

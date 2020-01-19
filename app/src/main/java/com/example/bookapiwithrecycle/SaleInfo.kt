@@ -1,20 +1,15 @@
-package com.example.bookapikotlin
+package com.example.bookapiwithrecycle
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class SaleInfo(var x:String="") {
+data class SaleInfo(
+    val country: String? = null,
 
-    @SerializedName("country")
-    @Expose
-    private var country: String? = null
-    get() = field
-    @SerializedName("saleability")
-    @Expose
-    private var saleability: String? = null
-    get() = field
-    @SerializedName("isEbook")
-    @Expose
-    private var isEbook: Boolean? = null
-    get() = field
+    val saleability: String? = null,
+
+    val isEbook: Boolean? = null
+) {
+
+
 }
